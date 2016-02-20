@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "revolt.settings.defaults": "0.x.x",
-    "revolt.settings.spacing": "0.x.x"
+    "revolt.settings.spacing": "0.x.x",
     "revolt.trumps.spacing": "0.x.x"
   },
   "license": "MIT"
