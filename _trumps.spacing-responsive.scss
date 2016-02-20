@@ -1,0 +1,39 @@
+//
+// REVOLT!
+// TRUMPS.SPACING-RESPONSIVE
+//
+
+
+
+// Predefine the variables below to alter and enable specific features.
+
+$revo-spacing-responsive-namespace:        $revo-trumps-namespace !default;
+$revo-spacing-responsive-breakpoints:      $revo-media-breakpoints !default;
+$revo-spacing-responsive-props:            $revo-spacing-props !default;
+$revo-spacing-responsive-map:              $revo-spacing-map !default;
+
+$revo-spacing-responsive-enable-module:    $revo-auto-enable !default;
+
+
+
+// Responsive spacing classes
+//
+// Wraps spacing classes in media query and adds breakpoint to class name.
+
+@mixin responsive-spacing-classes() {
+
+    @each $breakpoint in map-keys($revo-spacing-responsive-breakpoints) {
+        @include media-breakpoint-up($breakpoint) {
+            @include spacing-classes($breakpoint, $revo-spacing-responsive-props, $revo-spacing-responsive-map);
+        }
+    }
+
+}
+
+
+
+// Output responsive spacing classes if module is enabled.
+
+@if $revo-spacing-responsive-enable-module {
+    @include responsive-spacing-classes();
+}
