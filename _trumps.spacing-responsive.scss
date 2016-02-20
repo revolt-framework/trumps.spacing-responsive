@@ -12,7 +12,7 @@ $revo-spacing-responsive-breakpoints:      $revo-media-breakpoints !default;
 $revo-spacing-responsive-props:            $revo-spacing-props !default;
 $revo-spacing-responsive-map:              $revo-spacing-map !default;
 
-$revo-spacing-responsive-enable-module:    $revo-auto-enable !default;
+$revo-enable-spacing-responsive-module:    $revo-auto-enable !default;
 
 
 
@@ -34,6 +34,6 @@ $revo-spacing-responsive-enable-module:    $revo-auto-enable !default;
 
 // Output responsive spacing classes if module is enabled.
 
-@if $revo-spacing-responsive-enable-module {
+@if $revo-enable-spacing-responsive-module {
     @include responsive-spacing-classes();
 }
